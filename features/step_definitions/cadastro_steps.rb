@@ -28,6 +28,8 @@ Quando('submeto o seguinte formulário de cadastro:') do |table|
     find("#password").set user[:senha]
 
     click_button "Cadastrar"
+
+    sleep 5 
 end
 
 # Então('sou redirecionado para o Dashboard') do
