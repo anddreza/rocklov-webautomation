@@ -8,8 +8,8 @@ class LoginPage
     end 
 
     def with (email, password)
-        return find("input[placeholder='Seu email']").set email
-        return find("input[type=password]").set password 
+        find("input[placeholder='Seu email']").set email
+        find("input[type=password]").set password 
         click_button "Entrar"
     end 
     # def campo_email 
