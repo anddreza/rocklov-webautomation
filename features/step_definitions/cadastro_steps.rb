@@ -5,31 +5,23 @@ Dado('que acesso a página de cadastro') do
 end
   
 # Quando('submeto o meu cadastro completo') do
-
 #   MongoDB.new.remove_user("andrezasilva744@gmail.com")
-
 #     find("#fullName").set "Andreza Silva"
 #     find("#email").set "andrezasilva744@gmail.com"
 #     find("#password").set "pwd123"
-
 #     click_button "Cadastrar"
 # end
 
 Quando('submeto o seguinte formulário de cadastro:') do |table|
-  
   # log table.hashes
-
   user = table.hashes.first
-
   # log user
   MongoDB.new.remove_user(user[:email])
   @signup_page.create(user)
     # find("#fullName").set user[:nome]
     # find("#email").set user[:email]
     # find("#password").set user[:senha]
-
     # click_button "Cadastrar"
-
     # sleep 5 
 end
 
