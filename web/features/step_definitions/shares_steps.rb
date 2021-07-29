@@ -1,5 +1,5 @@
 Então('sou redirecionado para o Dashboard') do
-    expect(@dash_page.on_dash?).to be true 
+    expect(@dash_page.on_dash?).to be true
     # to have_css ".dashboard"
 end
 
