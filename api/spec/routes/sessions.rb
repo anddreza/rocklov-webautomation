@@ -1,8 +1,8 @@
-require "httparty"
+require_relative "base_api"
 
-class Sessions
-  include HTTParty
-  base_uri "http://rocklov-web:3333"
+class Sessions < BaseApi
+  # include HTTParty
+  # base_uri "http://rocklov-web:3333"
 
   def login(payload)
     # payload = { email: email, password: pass}

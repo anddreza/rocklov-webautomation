@@ -1,8 +1,8 @@
-require "httparty"
+require_relative "base_api"
 
-class Signup
-  include HTTParty
-  base_uri "http://rocklov-web:3333"
+class Signup < BaseApi
+  # include HTTParty
+  # base_uri "http://rocklov-web:3333"
 
   def create (payload)
 
