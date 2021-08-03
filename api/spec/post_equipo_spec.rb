@@ -8,12 +8,12 @@ describe "POST /equipos" do
 
   context "novo equipo" do
     before(:all) do
-      thumbnail = File.open(File.join(Dir.pwd, "spec/fixtures/images", "kramer.jpg"), "rb")
+    #   thumbnail = Helpers::get_thumb("kramer.jpg")
       # rb além de encontrar o arquivo, faz com que grave o arquivo dentro da variavel thumbnail no formato binario, 
       # somente leitura no formato binario, obter o conteudo correto dentro da variavel thumbail. 
 
       payload = {
-        thumbnail: thumbnail,
+        thumbnail:  Helpers::get_thumb("kramer.jpg"),
         name: "Kramer Eddie Van Halen",
         category: "Cordas",
         price: 299,
@@ -33,9 +33,10 @@ describe "POST /equipos" do
 
   context "nao autorizado" do
     before(:all) do
-      thumbnail = File.open(File.join(Dir.pwd, "spec/fixtures/images", "baixo.jpg"), "rb")
+    #   thumbnail =  Helpers::get_thumb("baixo.jpg")
+
       payload = {
-        thumbnail: thumbnail,
+        thumbnail: Helpers::get_thumb("baixo.jpg"),
         name: "Contra Baixo",
         category: "Cordas",
         price: 59,
