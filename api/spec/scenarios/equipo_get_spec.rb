@@ -92,5 +92,7 @@ describe "GET /equipos" do
       expect(@result.parsed_response).not_to be_empty
       # puts @result.parsed_response.class
     end 
+
+    
   end
 end
