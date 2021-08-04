@@ -2,14 +2,24 @@ require 'mongo'
 Mongo::Logger.logger = Logger.new("./logs/mongo.log")
 
 class MongoDB
-    attr_accessor :users, :equipos
+    attr_accessor :client, :users, :equipos
 
     def initialize 
-        client = Mongo::Client.new("mongodb://rocklov-db:27017/rocklov")
+        @client = Mongo::Client.new("mongodb://rocklov-db:27017/rocklov")
         @users = client[:users]
         @equipos = client[:equipos]
 
     end 
+
+    def insert_users(docs)
+        @users.insert_many(docs)
+        # insere tudo que está no spec_helpers (aqueles nomes lá com email e senha);
+    end 
+
+    def drop_danger
+        client.database.drop
+    end 
+
     def remove_user(email)
         @users.delete_many({email: email})
     end
