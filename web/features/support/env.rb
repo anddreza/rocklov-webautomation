@@ -4,21 +4,6 @@ require "capybara/cucumber"
 require "faker"
 
 CONFIG = YAML.load_file(File.join(Dir.pwd, "features/support/config/#{ENV["CONFIG"]}"))
-# BROWSER = ENV["BROWSER"]
-
-# if BROWSER == "firefox"
-#   @driver = :selenium 
-
-# elsif BROWSER == "fire_headless"
-#   @driver = :selenium_chrome_headless
-
-# elsif BROWSER == "chrome"
-#   @driver = :selenium_chrome
-
-# else 
-# @driver = :selenium_chrome_headless
-# end 
-
 case ENV["BROWSER"]
 when "firefox"
   @driver = :selenium

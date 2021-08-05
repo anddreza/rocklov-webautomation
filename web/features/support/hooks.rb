@@ -17,8 +17,5 @@ After do
         name: "Screenshot",
         type: Allure::ContentType::PNG,
         source: File.open(temp_shot),
-        
-
-
-            )
+         )
 end 

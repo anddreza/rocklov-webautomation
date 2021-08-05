@@ -3,6 +3,9 @@ Dado('Login com {string} e {string}') do |email, password|
    
     @login_page.open 
     @login_page.with(email, password)
+
+    # checkpoint para garantir que estamos no Dashboard
+    expect(@dash_page.on_dash?).to be true 
   end
 
 # Dado('que estou logado como {string} e {string}') do |email, password|
@@ -60,3 +63,26 @@ end
 Então('deve conter a mensagem de alerta: {string}') do |expect_alert|
     expect(@alert.dark).to have_text expect_alert 
 end
+
+#Remover anuncios.feature são steps gerados pelo cucumber com o intuito de automatizar essa parte do teste; 
+
+Dado('que eu tenho um anúncio indesejado:') do |table|
+
+    user_id = page.execute_script(" return localStorage.getItem('user')")
+    log user_id 
+    # table is a Cucumber::MultilineArgument::DataTable
+    pending # Write code here that turns the phrase above into concrete actions
+  end
+  
+  Quando('eu solicito a exclusão desse item') do
+    pending # Write code here that turns the phrase above into concrete actions
+  end
+  
+  Quando('confirmo a exclusão') do
+    pending # Write code here that turns the phrase above into concrete actions
+  end
+  
+  Então('não devo ver esse item no meu Dashboard') do
+    pending # Write code here that turns the phrase above into concrete actions
+  end
+  
