@@ -70,8 +70,17 @@ Dado('que eu tenho um anúncio indesejado:') do |table|
 
     user_id = page.execute_script(" return localStorage.getItem('user')")
     log user_id 
-    # table is a Cucumber::MultilineArgument::DataTable
-    pending # Write code here that turns the phrase above into concrete actions
+
+
+    thumbnail = File.open(File.join(Dir.pwd, "features/support/fixtures/images", table.rows_hash[:thumb]), "rb")
+      equipo = {
+        thumbnail: thumbnail,
+        name: table.rows_hash[:nome],
+        category: table.rows_hash[:categoria],
+        price: table.rows_hash[:preco],
+      }
+
+    EquiposService.new.create(equipo, user_id)
   end
   
   Quando('eu solicito a exclusão desse item') do

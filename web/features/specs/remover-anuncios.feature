@@ -1,14 +1,16 @@
 # language: pt
 
-
 Funcionalidade: Remover Anúncios
     Sendo um anúnciante que possui um equipamento indesejado
     Quero poder remover esse anúncio
-    Para que eu possa manter o meu dashboard atualizado
+    Para que eu possa manter o meu Dashboard atualizado
+
+    Contexto: Login
+    * Login com "spider@hotmail.com" e "pwd123"
 
     @temp
     Cenario: Remover um anúncio
-        * Login com "spide@hotmail.com" e "pwd123"
+        
 
         Dado que eu tenho um anúncio indesejado:
             | thumb     | telecaster.jpg |
