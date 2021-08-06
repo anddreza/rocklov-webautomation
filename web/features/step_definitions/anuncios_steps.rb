@@ -94,9 +94,21 @@ Quando("confirmo a exclusão") do
   @dash_page.confirm_removal
 end
 
+
+Quando('não confirmo a solicitação') do
+  @dash_page.cancel_removal
+end
+
+
 Então("não devo ver esse item no meu Dashboard") do
   # result = page.has_no_css?(".equipo-list li", text: @equipo[:name])
   expect(
     @dash_page.has_no_equipo?(@equipo[:name])
   ).to be true
 end
+
+Então('esse item deve permanecer no meu Dashboard') do                          
+  expect(@dash_page.equipo_list).to have_content @equipo[:name]
+
+end                                                                             
+                                                                                

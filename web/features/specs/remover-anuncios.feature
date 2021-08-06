@@ -8,7 +8,7 @@ Funcionalidade: Remover Anúncios
     Contexto: Login
     * Login com "spider@hotmail.com" e "pwd123"
 
-    @temp
+  
     Cenario: Remover um anúncio
         
 
@@ -21,6 +21,7 @@ Funcionalidade: Remover Anúncios
             E confirmo a exclusão
         Então não devo ver esse item no meu Dashboard
 
+    @temp
     Cenario: Desistir da exclusão
 
         Dado que eu tenho um anúncio indesejado:
@@ -30,6 +31,6 @@ Funcionalidade: Remover Anúncios
             | preco     | 100       |
         Quando eu solicito a exclusão desse item
             Mas não confirmo a solicitação
-        Então não devo ver esse item no meu Dashboard
+        Então esse item deve permanecer no meu Dashboard
 
     
