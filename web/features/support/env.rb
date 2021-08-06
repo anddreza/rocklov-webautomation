@@ -20,8 +20,9 @@ end
 Capybara.configure do |config|
   config.default_driver = @driver
   # selenium_firefox_headless
-  config.default_max_wait_time = 10
   config.app_host = CONFIG["url"]
+  config.default_max_wait_time = 10
+ 
 end
 
 AllureCucumber.configure do |config|
