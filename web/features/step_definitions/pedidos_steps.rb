@@ -16,26 +16,39 @@ Dado('que meu perfil de anúnciante é {string} e {string}') do |email, password
     price: table.rows_hash[:preco],
   }
 
-  MongoDB.new.remove_equipo(@equipo[:name], @email_anunciante)
+MongoDB.new.remove_equipo(@equipo[:name], @email_anunciante)
 
   result = EquiposService.new.create(@equipo, user_id)
   @equipo_id = result.parsed_response["_id"]
   log @equipo_id
-  end
+end
   
-  Dado('acesso o meu dashboard') do
-    pending # Write code here that turns the phrase above into concrete actions
-  end
+Dado('acesso o meu dashboard') do
+    @login_page.open
+    @login_page.with(@email_anunciante, @pass_anunciante)
   
-  Quando('{string} e {string} solicita a locação desse equipo') do |string, string2|
-    pending # Write code here that turns the phrase above into concrete actions
-  end
+    expect(@dash_page.on_dash?).to be true
+end
   
-  Então('devo ver a seguinte mensagem:') do |doc_string|
-    pending # Write code here that turns the phrase above into concrete actions
-  end
+Quando('{string} e {string} solicita a locação desse equipo') do |string, string2|
+    def booking(equipo_id, user_locator_id) 
+        return self.class.post(
+          "/equipos/#{equipo_id}/bookings",
+          body: { date: Time.now.strftime("%d/%m/#Y") }.to_json,
+          headers: {
+                  "user_id": user_locator_id, 
+                 },
+        )
+    
+    
+      end
+end
   
-  Então('devo ver os links: {string} e {string} no pedido') do |string, string2|
+Então('devo ver a seguinte mensagem:') do |doc_string|
     pending # Write code here that turns the phrase above into concrete actions
-  end
+end
+  
+Então('devo ver os links: {string} e {string} no pedido') do |string, string2|
+    pending # Write code here that turns the phrase above into concrete actions
+end
 
