@@ -19,7 +19,7 @@ task :local_seeds do
           ]
           MongoDB.new.drop_danger
           MongoDB.new.insert_users(users)
-          # sh "cucumber"  
+           sh "cucumber"  
 end 
 task :hmg_seeds do
     CONFIG = YAML.load_file(File.join(Dir.pwd, "features/support/config/hmg.yml"))
