@@ -288,7 +288,7 @@ a {
   <dl style="margin-left: 15px;">
   <dt id="example_group_2" class="passed">solicitar locacao</dt>
     <script type="text/javascript">moveProgressBar('3.5');</script>
-    <dd class="example passed"><span class="passed_spec_name">deve retornar 200</span><span class='duration'>0.00330s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">deve retornar 200</span><span class='duration'>0.00377s</span></dd>
   </dl>
 </div>
 <div id="div_group_3" class="example_group passed">
@@ -300,14 +300,14 @@ a {
   <dl style="margin-left: 15px;">
   <dt id="example_group_4" class="passed">obter unico equipo</dt>
     <script type="text/javascript">moveProgressBar('7.1');</script>
-    <dd class="example passed"><span class="passed_spec_name">deve retornar 204</span><span class='duration'>0.00010s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">deve retornar 204</span><span class='duration'>0.00020s</span></dd>
   </dl>
 </div>
 <div id="div_group_5" class="example_group passed">
   <dl style="margin-left: 15px;">
   <dt id="example_group_5" class="passed">equipo nao existe</dt>
     <script type="text/javascript">moveProgressBar('10.7');</script>
-    <dd class="example passed"><span class="passed_spec_name">deve retornar 204</span><span class='duration'>0.00016s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">deve retornar 204</span><span class='duration'>0.00018s</span></dd>
   </dl>
 </div>
 <div id="div_group_6" class="example_group passed">
@@ -319,16 +319,16 @@ a {
   <dl style="margin-left: 15px;">
   <dt id="example_group_7" class="passed">obter unico equipo</dt>
     <script type="text/javascript">moveProgressBar('14.2');</script>
-    <dd class="example passed"><span class="passed_spec_name">deve retornar 200</span><span class='duration'>0.00009s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">deve retornar 200</span><span class='duration'>0.00010s</span></dd>
     <script type="text/javascript">moveProgressBar('17.8');</script>
-    <dd class="example passed"><span class="passed_spec_name">deve retornar o nome</span><span class='duration'>0.00487s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">deve retornar o nome</span><span class='duration'>0.00599s</span></dd>
   </dl>
 </div>
 <div id="div_group_8" class="example_group passed">
   <dl style="margin-left: 15px;">
   <dt id="example_group_8" class="passed">equipo nao existe</dt>
     <script type="text/javascript">moveProgressBar('21.4');</script>
-    <dd class="example passed"><span class="passed_spec_name">deve retornar 404</span><span class='duration'>0.00009s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">deve retornar 404</span><span class='duration'>0.00013s</span></dd>
   </dl>
 </div>
 <div id="div_group_9" class="example_group passed">
@@ -340,9 +340,9 @@ a {
   <dl style="margin-left: 15px;">
   <dt id="example_group_10" class="passed">obter uma lista</dt>
     <script type="text/javascript">moveProgressBar('25.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">deve retornar 200</span><span class='duration'>0.00011s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">deve retornar 200</span><span class='duration'>0.00010s</span></dd>
     <script type="text/javascript">moveProgressBar('28.5');</script>
-    <dd class="example passed"><span class="passed_spec_name">deve retornar uma lista de equipos</span><span class='duration'>0.00513s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">deve retornar uma lista de equipos</span><span class='duration'>0.00497s</span></dd>
   </dl>
 </div>
 <div id="div_group_11" class="example_group passed">
@@ -354,14 +354,14 @@ a {
   <dl style="margin-left: 15px;">
   <dt id="example_group_12" class="passed">novo equipo</dt>
     <script type="text/javascript">moveProgressBar('32.1');</script>
-    <dd class="example passed"><span class="passed_spec_name">deve retornar 200</span><span class='duration'>0.00010s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">deve retornar 200</span><span class='duration'>0.00012s</span></dd>
   </dl>
 </div>
 <div id="div_group_13" class="example_group passed">
   <dl style="margin-left: 15px;">
   <dt id="example_group_13" class="passed">nao autorizado</dt>
     <script type="text/javascript">moveProgressBar('35.7');</script>
-    <dd class="example passed"><span class="passed_spec_name">deve retornar 401</span><span class='duration'>0.00008s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">deve retornar 401</span><span class='duration'>0.00015s</span></dd>
   </dl>
 </div>
 <div id="div_group_14" class="example_group passed">
@@ -372,58 +372,17 @@ a {
 <div id="div_group_15" class="example_group passed">
   <dl style="margin-left: 15px;">
   <dt id="example_group_15" class="passed">login com sucesso</dt>
-    <script type="text/javascript">makeRed('rspec-header');</script>
-    <script type="text/javascript">makeRed('div_group_15');</script>
-    <script type="text/javascript">makeRed('example_group_15');</script>
     <script type="text/javascript">moveProgressBar('39.2');</script>
-    <dd class="example failed">
-      <span class="failed_spec_name">valida status code</span>
-      <span class="duration">0.03803s</span>
-      <div class="failure" id="failure_1">
-        <div class="message"><pre>  Failure/Error: expect(@result.code).to eql 201
-
-    expected: 201
-         got: 200
-
-    (compared using eql?)
-  # ./spec/scenarios/session_post_spec.rb:23:in `block (3 levels) in &lt;top (required)&gt;&#39;</pre></div>
-        <div class="backtrace"><pre>./spec/scenarios/session_post_spec.rb:23:in `block (3 levels) in &lt;top (required)&gt;&#39;</pre></div>
-    <pre class="ruby"><code><span class="linenum">21</span>
-<span class="linenum">22</span>        it "valida status code" do 
-<span class="offending"><span class="linenum">23</span>            expect(@result.code).to eql 201</span>
-<span class="linenum">24</span>        end 
-<span class="linenum">25</span>
-<span class="linenum">26</span><span class="comment"># Install the coderay gem to get syntax highlighting</span></code></pre>
-      </div>
-    </dd>
+    <dd class="example passed"><span class="passed_spec_name">valida status code</span><span class='duration'>0.00032s</span></dd>
     <script type="text/javascript">moveProgressBar('42.8');</script>
-    <dd class="example failed">
-      <span class="failed_spec_name">valida id do usuário</span>
-      <span class="duration">0.00033s</span>
-      <div class="failure" id="failure_2">
-        <div class="message"><pre>  Failure/Error: expect(@result.parsed_response[&quot;_id&quot;].length).to eql 25
-
-    expected: 25
-         got: 24
-
-    (compared using eql?)
-  # ./spec/scenarios/session_post_spec.rb:27:in `block (3 levels) in &lt;top (required)&gt;&#39;</pre></div>
-        <div class="backtrace"><pre>./spec/scenarios/session_post_spec.rb:27:in `block (3 levels) in &lt;top (required)&gt;&#39;</pre></div>
-    <pre class="ruby"><code><span class="linenum">25</span>
-<span class="linenum">26</span>        it "valida id do usuário" do 
-<span class="offending"><span class="linenum">27</span>            expect(@result.parsed_response["_id"].length).to eql 25</span>
-<span class="linenum">28</span>        end 
-<span class="linenum">29</span>    end
-<span class="linenum">30</span><span class="comment"># Install the coderay gem to get syntax highlighting</span></code></pre>
-      </div>
-    </dd>
+    <dd class="example passed"><span class="passed_spec_name">valida id do usuário</span><span class='duration'>0.00022s</span></dd>
   </dl>
 </div>
 <div id="div_group_16" class="example_group passed">
   <dl style="margin-left: 15px;">
   <dt id="example_group_16" class="passed">senha incorreta</dt>
     <script type="text/javascript">moveProgressBar('46.4');</script>
-    <dd class="example passed"><span class="passed_spec_name">valida status code 401</span><span class='duration'>0.00010s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">valida status code 401</span><span class='duration'>0.00022s</span></dd>
     <script type="text/javascript">moveProgressBar('50.0');</script>
     <dd class="example passed"><span class="passed_spec_name">valida id do usuário</span><span class='duration'>0.00012s</span></dd>
   </dl>
@@ -432,45 +391,45 @@ a {
   <dl style="margin-left: 15px;">
   <dt id="example_group_17" class="passed">usuario não existe</dt>
     <script type="text/javascript">moveProgressBar('53.5');</script>
-    <dd class="example passed"><span class="passed_spec_name">valida status code 401</span><span class='duration'>0.00022s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">valida status code 401</span><span class='duration'>0.00018s</span></dd>
     <script type="text/javascript">moveProgressBar('57.1');</script>
-    <dd class="example passed"><span class="passed_spec_name">valida id do usuário</span><span class='duration'>0.00014s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">valida id do usuário</span><span class='duration'>0.00017s</span></dd>
   </dl>
 </div>
 <div id="div_group_18" class="example_group passed">
   <dl style="margin-left: 15px;">
   <dt id="example_group_18" class="passed">email em branco</dt>
     <script type="text/javascript">moveProgressBar('60.7');</script>
-    <dd class="example passed"><span class="passed_spec_name">valida status code 412</span><span class='duration'>0.00015s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">valida status code 412</span><span class='duration'>0.00018s</span></dd>
     <script type="text/javascript">moveProgressBar('64.2');</script>
-    <dd class="example passed"><span class="passed_spec_name">valida id do usuário</span><span class='duration'>0.00012s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">valida id do usuário</span><span class='duration'>0.00015s</span></dd>
   </dl>
 </div>
 <div id="div_group_19" class="example_group passed">
   <dl style="margin-left: 15px;">
   <dt id="example_group_19" class="passed">sem o campo email</dt>
     <script type="text/javascript">moveProgressBar('67.8');</script>
-    <dd class="example passed"><span class="passed_spec_name">valida status code 412</span><span class='duration'>0.00011s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">valida status code 412</span><span class='duration'>0.00010s</span></dd>
     <script type="text/javascript">moveProgressBar('71.4');</script>
-    <dd class="example passed"><span class="passed_spec_name">valida id do usuário</span><span class='duration'>0.00020s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">valida id do usuário</span><span class='duration'>0.00010s</span></dd>
   </dl>
 </div>
 <div id="div_group_20" class="example_group passed">
   <dl style="margin-left: 15px;">
   <dt id="example_group_20" class="passed">senha em branco</dt>
     <script type="text/javascript">moveProgressBar('75.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">valida status code 412</span><span class='duration'>0.00024s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">valida status code 412</span><span class='duration'>0.00045s</span></dd>
     <script type="text/javascript">moveProgressBar('78.5');</script>
-    <dd class="example passed"><span class="passed_spec_name">valida id do usuário</span><span class='duration'>0.00011s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">valida id do usuário</span><span class='duration'>0.00014s</span></dd>
   </dl>
 </div>
 <div id="div_group_21" class="example_group passed">
   <dl style="margin-left: 15px;">
   <dt id="example_group_21" class="passed">sem o campo senha</dt>
     <script type="text/javascript">moveProgressBar('82.1');</script>
-    <dd class="example passed"><span class="passed_spec_name">valida status code 412</span><span class='duration'>0.00050s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">valida status code 412</span><span class='duration'>0.00014s</span></dd>
     <script type="text/javascript">moveProgressBar('85.7');</script>
-    <dd class="example passed"><span class="passed_spec_name">valida id do usuário</span><span class='duration'>0.00020s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">valida id do usuário</span><span class='duration'>0.00021s</span></dd>
   </dl>
 </div>
 <div id="div_group_22" class="example_group passed">
@@ -482,22 +441,22 @@ a {
   <dl style="margin-left: 15px;">
   <dt id="example_group_23" class="passed">novo usuario</dt>
     <script type="text/javascript">moveProgressBar('89.2');</script>
-    <dd class="example passed"><span class="passed_spec_name">valida status code</span><span class='duration'>0.00017s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">valida status code</span><span class='duration'>0.00011s</span></dd>
     <script type="text/javascript">moveProgressBar('92.8');</script>
-    <dd class="example passed"><span class="passed_spec_name">valida id do usuário</span><span class='duration'>0.00010s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">valida id do usuário</span><span class='duration'>0.00014s</span></dd>
   </dl>
 </div>
 <div id="div_group_24" class="example_group passed">
   <dl style="margin-left: 15px;">
   <dt id="example_group_24" class="passed">usuario ja existe</dt>
     <script type="text/javascript">moveProgressBar('96.4');</script>
-    <dd class="example passed"><span class="passed_spec_name">deve retornar 409</span><span class='duration'>0.00013s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">deve retornar 409</span><span class='duration'>0.00009s</span></dd>
     <script type="text/javascript">moveProgressBar('100.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">deve retornar mensagem </span><span class='duration'>0.00010s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">deve retornar mensagem </span><span class='duration'>0.00110s</span></dd>
   </dl>
 </div>
-<script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>1.36922 seconds</strong>";</script>
-<script type="text/javascript">document.getElementById('totals').innerHTML = "28 examples, 2 failures";</script>
+<script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>1.35361 seconds</strong>";</script>
+<script type="text/javascript">document.getElementById('totals').innerHTML = "28 examples, 0 failures";</script>
 </div>
 </div>
 </body>
